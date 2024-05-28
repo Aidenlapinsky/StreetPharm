@@ -1,67 +1,128 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-.hero {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
 }
 
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.about {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
-.about h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.nav-links i {
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.our-products {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
+.hero-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
-.our-products h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+#nav-links-sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 1em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#nav-links-sub ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-links-sub li {
+  margin-bottom: 10px;
+}
+
+#nav-links-sub a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#nav-links-sub a:hover {
+  color: #ccc;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+section {
+  background-color: #fff;
+  padding: 2em;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  margin-top: 0;
 }
 
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 200px;
+  margin: 20px;
+  width: calc(25% - 40px);
 }
 
 .product h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  margin-top: 0;
 }
 
-.contact {
-    background-color: #fff;
-    padding: 20px;
+.product p {
+  margin-bottom: 20px;
 }
 
-.contact h2 {
-font-size: 24px;
-    margin-bottom: 10px;
+.contact p {
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+ .product {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+ .product {
+    width: 100%;
+  }
 }
