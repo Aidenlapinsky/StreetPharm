@@ -17,6 +17,7 @@
                         <li><a href="#about-us">About</a></li>
                         <li><a href="#our-products">Products</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="#cart">Cart</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,92 +44,97 @@
                 <div class="product">
                     <h3>Cocaine 💉</h3>
                     <p>$50/gram, $200/eighth, $500/ounce</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Cocaine', 50)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Weed 🌱</h3>
                     <p>$10/gram, $30/eighth, $60/ounce</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Weed', 10)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Ecstasy 💊</h3>
                     <p>$20/pill, $50/5 pills, $100/10 pills</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Ecstasy', 20)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Opium 💉</h3>
                     <p>$30/gram, $60/eighth, $120/ounce</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Opium', 30)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Methamphetamine 💊</h3>
                     <p>$40/gram, $80/eighth, $160/ounce</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Methamphetamine', 40)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Heroin 💉</h3>
                     <p>$50/gram, $100/eighth, $200/ounce</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Heroin', 50)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>LSD 💊</h3>
                     <p>$10/tab, $30/5 tabs, $60/10 tabs</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'LSD', 10)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Ketamine 💊</h3>
                     <p>$20/gram, $40/eighth, $80/ounce</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Ketamine', 20)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>MDMA 💊</h3>
                     <p>$30/pill, $60/5 pills, $120/10 pills</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'MDMA', 30)">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <h3>Crack Cocaine💉</h3>
-                    <p>$30/rock, $60/5 rocks, $120/10 rocks</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <h3>Crack Cocaine 💉</h3>
+                    <p>$50/gram, $200/eighth, $500/ounce</p>
+                    <button class="btn" onclick="addToCart(this, 'Crack Cocaine', 50)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Fentanyl 💉</h3>
-                    <p>$20/pill, $40/5 pills, $80/10 pills</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <p>$20/gram, $40/eighth, $80/ounce</p>
+                    <button class="btn" onclick="addToCart(this, 'Fentanyl', 20)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>OxyContin 💊</h3>
                     <p>$30/pill, $60/5 pills, $120/10 pills</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'OxyContin', 30)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Vicodin 💊</h3>
                     <p>$20/pill, $40/5 pills, $80/10 pills</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Vicodin', 20)">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <h3>Adderall 💊</h3>
+                    <h3>Percocet 💊</h3>
                     <p>$30/pill, $60/5 pills, $120/10 pills</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Percocet', 30)">Add to Cart</button>
                 </div>
                 <div class="product">
                     <h3>Xanax 💊</h3>
                     <p>$20/pill, $40/5 pills, $80/10 pills</p>
-                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                    <button class="btn" onclick="addToCart(this, 'Xanax', 20)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <h3>Adderall 💊</h3>
+                    <p>$30/pill, $60/5 pills, $120/10 pills</p>
+                    <button class="btn" onclick="addToCart(this, 'Adderall', 30)">Add to Cart</button>
                 </div>
             </div>
-            <div class="cart">
-                <h3>Cart</h3>
-                <ul id="cart-items"></ul>
-                <p>Total: $<span id="cart-total">0</span></p>
-            </div>
+        </section>
+        <section class="cart" id="cart">
+            <h2>Cart</h2>
+            <ul id="cart-list"></ul>
+            <p id="total-price">$0.00</p>
+            <button class="btn" onclick="checkout()">Checkout</button>
         </section>
         <section class="contact" id="contact">
             <h2>Contact</h2>
-            <p>Contact us for more information about our products or to place an order.</p>
-            <p>Email: <a href="mailto:drugs@example.com">drugs@example.com</a></p>
-            <p>Phone: <a href="tel:+1234567890">+1234567890</a></p>
+            <p>Get in touch with us!</p>
         </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
