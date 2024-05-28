@@ -1,3 +1,4 @@
 function toggleMenu() {
-    document.getElementById("nav-links-sub").classList.toggle("active");
+  const navLinksSub = document.getElementById('nav-links-sub');
+  navLinksSub.style.display = navLinksSub.style.display === 'block'? 'none' : 'block';
 }
