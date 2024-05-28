@@ -1,53 +1,63 @@
-let cartItems = [];
-let cartTotal = 0;
+let cart = [];
 
-function toggleMenu() {
-  const navLinksSub = document.getElementById('nav-links-sub');
-  navLinksSub.style.display = navLinksSub.style.display === 'block'? 'none' : 'block';
+function addToCart(element, drug, price) {
+    const quantity = prompt("How many grams/eighths/ounces do you want?", "1");
+    if (quantity > 0) {
+        const cartItem = {
+            drug: drug,
+            quantity: quantity,
+            price: price,
+            total: price * quantity
+        };
+        cart.push(cartItem);
+        const cartItemElement = document.createElement("li");
+        cartItemElement.textContent = `${drug}: ${quantity} grams/eighths/ounces - $${price} each - $${price * quantity} total`;
+        document.getElementById("cart-list").appendChild(cartItemElement);
+        updateTotalPrice();
+    }
+}
+
+function updateTotalPrice() {
+    let totalPrice = 0;
+    for (let i = 0; i < cart.length; i++) {
+        totalPrice += cart[i].total;
+    }
+    document.getElementById("total-price").textContent = `$${totalPrice.toFixed(2)}`;
 }
 
 function showSearchBar() {
-  const searchBar = document.getElementById('search-bar');
-  searchBar.style.display = 'block';
+    document.getElementById("search-bar").style.display = "block";
 }
 
 function searchProducts() {
-  const searchInput = document.getElementById('search-input');
-  const searchResults = document.getElementById('search-results');
-  const products = document.querySelectorAll('.product');
-  const searchTerm = searchInput.value.toLowerCase();
-
-  searchResults.innerHTML = '';
-
-  products.forEach((product) => {
-    const productName = product.querySelector('h3').textContent.toLowerCase();
-    if (productName.includes(searchTerm)) {
-      const searchResult = document.createElement('li');
-      searchResult.textContent = productName;
-      searchResults.appendChild(searchResult);
+    const searchTerm = document.getElementById("search-input").value.toLowerCase();
+    const products = document.getElementsByClassName("product");
+    const searchResults = document.getElementById("search-results");
+    searchResults.innerHTML = "";
+    for (let i = 0; i < products.length; i++) {
+        const productName = products[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
+        if (productName.includes(searchTerm)) {
+            const productElement = products[i].cloneNode(true);
+            searchResults.appendChild(productElement);
+        }
     }
-  });
 }
 
-function addToCart(product) {
-  const cart = document.getElementById('cart');
-  const cartItemsList = document.getElementById('cart-items');
-  const cartTotalElement = document.getElementById('cart-total');
-  const productName = product.querySelector('h3').textContent;
-  const productPrice = product.querySelector('p').textContent;
+function checkout() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+    } else {
+        let total = 0;
+        for (let i = 0; i < cart.length; i++) {
+            total += cart[i].total;
+        }
+        alert(`You have successfully checked out for $${total}.`);
+        cart = [];
+        document.getElementById("cart-list").innerHTML = "";
+        updateTotalPrice();
+    }
+}
 
-  cartItems.push({ name: productName, price: productPrice });
-  cartTotal += parseFloat(productPrice.replace('$', ''));
-
-  cartItemsList.innerHTML = '';
-
-  cartItems.forEach((item) => {
-    const cartItem = document.createElement('li');
-    cartItem.textContent = `${item.name} - ${item.price}`;
-    cartItemsList.appendChild(cartItem);
-  });
-
-  cartTotalElement.textContent = cartTotal.toFixed(2);
-
-  cart.style.display = 'block';
+function toggleMenu() {
+    document.getElementById("nav-links-sub").classList.toggle("active");
 }
