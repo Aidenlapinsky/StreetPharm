@@ -67,7 +67,60 @@ header {
     padding: 20px;
 }
 
+.our-products {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
 .contact {
     background-color: #f0f0f0;
     padding: 20px;
+}
+
+/* Add some color to the website */
+.hero {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.product {
+    background-color: #fff;
+    border-color: #3498db;
+}
+
+.product h3 {
+    color: #3498db;
+}
+
+.about {
+    background-color: #f7f7f7;
+}
+
+.our-products {
+    background-color: #f7f7f7;
+}
+
+.contact {
+    background-color: #f7f7f7;
+}
+
+/* Add some hover effects to the products */
+.product:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.product:hover h3 {
+    color: #fff;
+}
+
+/* Add some responsiveness to the website */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+    }
+
+    .product {
+        margin: 10px;
+    }
 }
